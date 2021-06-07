@@ -14,23 +14,80 @@ h2 {
   letter-spacing: 1rem;
 }
 
+@media screen and (min-width: 1440px) {
+  h1,
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+#errorMsg,
+#validMsg,
+#submitMsg {
+  display: none;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  text-align: left;
+}
+
 body {
   width: 23.4375rem;
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1440px) {
+  body {
+    width: 90rem;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: round;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 830px 610px;
+        grid-template-columns: 830px 610px;
+    -ms-grid-rows: 160px 640px;
+        grid-template-rows: 160px 640px;
+        grid-template-areas: "logo image" "main image";
+  }
+}
+
 body header {
-  padding: 2rem;
+  margin: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  body header {
+    grid-area: logo;
+    padding: 0;
+    margin-top: 4rem;
+    margin-left: 10.25rem;
+  }
 }
 
 body img {
   content: url("../images/hero-mobile.jpg");
 }
 
+@media screen and (min-width: 1440px) {
+  body img {
+    content: url("../images/hero-desktop.jpg");
+    grid-area: image;
+  }
+}
+
 body main {
   width: 23.4375rem;
-  padding: 2rem;
+  margin: 2rem;
   text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  body main {
+    grid-area: main;
+    margin-top: 2rem;
+    margin-left: 10.25rem;
+    text-align: left;
+  }
 }
 
 body main h2 {
@@ -50,6 +107,13 @@ body main p {
   font-weight: 400;
   color: #ce9797;
   line-height: 1.3rem;
+}
+
+@media screen and (min-width: 1440px) {
+  body main p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 body main .inputBox {
@@ -98,20 +162,11 @@ body main .inputBox button:active {
 }
 
 body main #errorMsg {
-  display: none;
   color: #f96262;
-  font-size: 1rem;
-  margin-top: 1.5rem;
-  margin-left: 1rem;
-  text-align: left;
 }
 
-body main #validMsg {
-  display: none;
+body main #validMsg,
+body main #submitMsg {
   color: green;
-  font-size: 1rem;
-  margin-top: 1.5rem;
-  margin-left: 1rem;
-  text-align: left;
 }
 /*# sourceMappingURL=main.css.map */

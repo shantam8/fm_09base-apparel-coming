@@ -13,24 +13,67 @@ h2 {
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1rem;
+
+  @media screen and(min-width:1440px) {
+    font-size: 3rem;
+  }
+}
+
+#errorMsg,
+#validMsg,
+#submitMsg {
+  display: none;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  text-align: left;
 }
 
 body {
   width: 23.4375rem;
   margin: 0 auto;
 
+  @media screen and (min-width: 1440px) {
+    width: 90rem;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    //background-size:  contain;
+    background-repeat: round;
+    display: grid;
+    grid-template-columns: 830px 610px;
+    grid-template-rows: 160px 640px;
+    grid-template-areas: "logo image" "main image";
+  }
+
   header {
-    padding: 2rem;
+    margin: 2rem;
+
+    @media screen and (min-width: 1440px) {
+      grid-area: logo;
+      padding: 0;
+      margin-top: 4rem;
+      margin-left: 10.25rem;
+    }
   }
 
   img {
     content: url("../images/hero-mobile.jpg");
+    @media screen and (min-width: 1440px) {
+      content: url("../images/hero-desktop.jpg");
+      grid-area: image;
+    }
   }
 
   main {
     width: 23.4375rem;
-    padding: 2rem;
+    margin: 2rem;
     text-align: center;
+
+    @media screen and (min-width: 1440px) {
+      grid-area: main;
+      margin-top: 2rem;
+      margin-left: 10.25rem;
+      text-align: left;
+    }
 
     h2 {
       padding-top: 1rem;
@@ -48,6 +91,11 @@ body {
       font-weight: 400;
       color: $desaturatedRed;
       line-height: 1.3rem;
+
+      @media screen and (min-width: 1440px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
     }
 
     .inputBox {
@@ -95,21 +143,12 @@ body {
       }
     }
     #errorMsg {
-      display: none;
       color: $softRed;
-      font-size: 1rem;
-      margin-top: 1.5rem;
-      margin-left: 1rem;
-      text-align: left;
     }
 
-    #validMsg {
-      display: none;
+    #validMsg,
+    #submitMsg {
       color: green;
-      font-size: 1rem;
-      margin-top: 1.5rem;
-      margin-left: 1rem;
-      text-align: left;
     }
   }
 }
