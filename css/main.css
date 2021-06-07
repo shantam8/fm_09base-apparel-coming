@@ -4,6 +4,114 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+body {
+  width: 23.4375rem;
+  margin: 0 auto;
+}
+
+body header {
+  padding: 2rem;
+}
+
+body img {
+  content: url("../images/hero-mobile.jpg");
+}
+
+body main {
+  width: 23.4375rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+body main h2 {
+  padding-top: 1rem;
+  font-weight: 300;
+  color: #ce9797;
+}
+
+body main h1 {
+  font-weight: 600;
+  color: #413a3a;
+}
+
+body main p {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ce9797;
+  line-height: 1.3rem;
+}
+
+body main .inputBox {
+  margin-top: 2.375rem;
+  height: 3.125rem;
+  width: 100%;
+  border: 1px solid #ce9797;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .inputBox input {
+  width: 60%;
+  border: none;
+  color: #ce9797;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+body main .inputBox #errorIcon {
+  display: none;
+}
+
+body main .inputBox button {
+  height: 103%;
+  width: 4rem;
+  border: none;
+  border-radius: 25px;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+}
+
+body main .inputBox button:active {
+  background-image: linear-gradient(135deg, #fdeded, #f4b8b8);
+}
+
+body main #errorMsg {
+  display: none;
+  color: #f96262;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+body main #validMsg {
+  display: none;
+  color: green;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  text-align: left;
 }
 /*# sourceMappingURL=main.css.map */
